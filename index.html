@@ -1,0 +1,90 @@
+<html>
+  <head>
+    <title>Test 2 Answer</title>
+    <style>
+      html,
+      body {
+        font-family: "Inter", sans-serif;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        color: #555555;
+        background: #fafafa;
+      }
+      .box {
+        width: 800px;
+        height: 100px;
+        display: block;
+        margin: 50px;
+      }
+      .box2 {
+        width: 100px;
+        height: 600px;
+        display: block;
+        margin: 50px;
+      }
+      .box_inside,
+      .box2_inside,
+      .box_inside:hover,
+      .box2_inside:hover {
+        width: 100px;
+        height: 100px;
+        float: left;
+        background-image: url(https://img.icons8.com/plasticine/100/connection-status-on.png);
+        background-repeat: no-repeat !important;
+        background-size: 30%;
+        background-position: center;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      .box:hover > .box_inside:not(:hover) {
+        background-image: var(--arrow-right);
+      }
+
+      .box_inside:hover ~ .box_inside:not(:hover) {
+        background-image: var(--arrow-left);
+      }
+
+      .box2:hover > .box2_inside:not(:hover) {
+        background-image: var(--arrow-down);
+      }
+
+      .box2_inside:hover ~ .box2_inside:not(:hover) {
+        background-image: var(--arrow-up);
+      }
+
+      /*
+        assets:
+        RIGHT ARROW: https://d1edrlpyc25xu0.cloudfront.net/hat-ppxmocchbbcbhopzk/image/upload/w_320,h_320,c_limit/DFrQ7vCgy2/right.png
+        LEFT ARROW: https://d1edrlpyc25xu0.cloudfront.net/hat-ppxmocchbbcbhopzk/image/upload/w_320,h_320,c_limit/4RQPxvmQRX/left.png
+        DOWN ARROW: https://d1edrlpyc25xu0.cloudfront.net/hat-ppxmocchbbcbhopzk/image/upload/w_320,h_320,c_limit/rR-t7stGWr/down.png
+        UP ARROW: https://d1edrlpyc25xu0.cloudfront.net/hat-ppxmocchbbcbhopzk/image/upload/w_320,h_320,c_limit/YdH9_StfiW/up.png
+      */
+      :root {
+        --arrow-right: url(https://img.icons8.com/plasticine/100/long-arrow-right.png);
+        --arrow-left: url(https://img.icons8.com/plasticine/100/long-arrow-left.png);
+        --arrow-up: url(https://img.icons8.com/plasticine/100/long-arrow-up.png);
+        --arrow-down: url(https://img.icons8.com/plasticine/100/long-arrow-down.png);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="box_inside"></div>
+      <div class="box_inside"></div>
+      <div class="box_inside"></div>
+      <div class="box_inside"></div>
+      <div class="box_inside"></div>
+      <div class="box_inside"></div>
+    </div>
+    <div class="box2">
+      <div class="box2_inside"></div>
+      <div class="box2_inside"></div>
+      <div class="box2_inside"></div>
+      <div class="box2_inside"></div>
+      <div class="box2_inside"></div>
+      <div class="box2_inside"></div>
+    </div>
+  </body>
+</html>
